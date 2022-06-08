@@ -34,10 +34,13 @@ console.log(globalName);
 // 3. Constants - immutable : security, tread safety, reduce human mistake
 const daysInWeek = 7;
 
+const price = 5000;
+console.log(`가격: ${price}`);
+
 const a = 1/0;
 const b = -1/0;
 const c = 'not a num'/2;
 console.log(a);
 console.log(b);
-console.log(c);
+console.log(c); // NaN
 
