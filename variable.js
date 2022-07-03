@@ -14,7 +14,7 @@
 
 
 // 2. let
-let globalName = 'globalName'
+let globalName = 'global'
 {
 console.log(globalName);
 
@@ -27,7 +27,12 @@ console.log(name);
 name = 'nick';
 }
 
-console.log(name);
+/** {}안의 let 변수name --> {} 안에서만 출력가능! 
+ *  {}밖에서 출력시 오류발생, 주석처리
+ * console.log(name) ; 
+ */
+
+/** {}밖의 let 변수globalName --> {}안과 밖에서 모두 출력가능  */
 console.log(globalName);
 
 
@@ -35,12 +40,13 @@ console.log(globalName);
 const daysInWeek = 7;
 
 const price = 5000;
-console.log(`가격: ${price}`);
+console.log(`일주일은 몇일인가? 답:${daysInWeek}일`); 
+           //일주일은 몇일인가? 답:7일
 
 const a = 1/0;
 const b = -1/0;
 const c = 'not a num'/2;
-console.log(a);
-console.log(b);
+console.log(a); //Infinity
+console.log(b); //-Infinity
 console.log(c); // NaN
 
