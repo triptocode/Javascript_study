@@ -1,4 +1,4 @@
-// 변수 3개 비교: var, let, const 
+// JS 변수 3개 비교: var, let, const 
 // Block Scope vs Global Scope
 
 
