@@ -52,19 +52,20 @@ console.log( 'hello\nworld');  //  한줄 띄우기 enter
 
 
 // 2. let
-let globalName = 'global'
+let globalName = 'global'  // 처음부터 let 변수선언과 동시에 값을 정의=할당하는 초기화 가능 
 {
-console.log(globalName);
+    console.log(globalName); 
 
-let name = 'ana';
-console.log(name);
+    let name = 'ana';
+    console.log(name);
 
-name = 'lisa';
-console.log(name);
+    // let name = 'lisa';   let으로 같은 중복된 변수명으로 새로 변수 선언하는것은 에러발생
+    name = 'lisa';         // 이미 선언한 let 의 name 변수명에 값을 재정의=재할당 하는것은 가능
+    console.log(name);
 
-name = 'nick';
+    name='nick';
 }
-
+//    console.log(name); 에러발생 
 /** {}안의 let 변수name --> {} 안에서만 출력가능! 
  *  {}밖에서 출력시 오류발생, 주석처리
  * console.log(name) ; 
@@ -74,19 +75,12 @@ name = 'nick';
 console.log(globalName);
 
 
-// 3. Constants - immutable : security, tread safety, reduce human mistake
+
+// 3. Constants - immutable : security, safety, reduce human mistake
 const daysInWeek = 7;
-
 const price = 5000;
-
 console.log(`일주일은 몇일인가? 답:${daysInWeek}일`);   // 주의: 역따옴표 사용! ( 키보드에서: 물결표시key )
            //일주일은 몇일인가? 답:7일
            // console.log('일주일은 몇일인가? 답: ' +daysInWeek+ '일'); 
         
 
-// const a = 1/0;
-// const b = -1/0;
-// const c = 'not a num'/2;
-// console.log(a); //Infinity
-// console.log(b); //-Infinity
-// console.log(c); // NaN
