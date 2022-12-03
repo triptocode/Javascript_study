@@ -5,9 +5,9 @@
 // 2) ; 세미콜론은 작성해도 안해도 다 작동
 console.log( 'hello');
 console.log( "hello");
-console.log( 'hello')
+console.log( 'hello') 
 
-console.log("2022-12-03")  // 문자
+console.log("2022-12-03")  // 문자 
 console.log(2022-12-03)    // 숫자 , 뺄셈
 
 
