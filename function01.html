@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function twoNum (x,y){   // 1-1) x,y파라미터 변수를 넣은 함수생성 , 필요할때 편히쓰려고 함수만들어둠
+            return x+y           // return 이후부터 추가코드 작성은 불가해짐에 주의 
+        }
+        let sum = twoNum(10,20) // 1-2)  10,20 인자를 파라미터에 넘기고 함수 호출
+        console.log(sum)
+
+        function myCar (color){   // 2-1. color파라미터(인자를 받는 변수같은 개념)를 넣은 함수생성
+            console.log("My car is "+color)
+        } 
+        myCar('silver')  // 2-2. silver 인를 파라미터에 넘기고 함수 호출 
+
+        function grade(score){
+            if(score>=90){ return 'A'}
+            else if(score>=80){ return 'B'}
+            else if(score>=70){ return 'C'}
+            else if(score>=60){ return 'D'}
+            else return 'F';
+        }
+         const result = grade(50)
+         console.log(result)   
+
+    </script>
+    
+</body>
+</html>
