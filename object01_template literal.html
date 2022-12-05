@@ -11,18 +11,19 @@
 
         const potatoPizza = {
             topping: "potato",
-            size: "small",
-            price: "16000"
+            price: 16000,
+            "pizza brand": "59pizza"
          };
 
          const seafoodPizza = {
             topping: "shrimp",
             size: "large",
-            price: "24000"
+            price: 24000,
+            "pizza brand": "Mr.pizza"   // 문제: keyName 에 공백이 생기면오류 발생--> 해결: quote 따옴표를 붙인다. 호출방법은 26번줄처럼 pizzaName["pizza brand"]
          };
 
          function pizzaInfo(pizzaName){
-            const text = `이 피자 재료는 ${pizzaName.topping}이고 크기는 ${pizzaName.size}이며, 가격은 ${pizzaName.price}입니다.`
+            const text = `이 피자 브랜드는 ${pizzaName["pizza brand"]}이고, 토핑은 ${pizzaName.topping}, 크기는 ${pizzaName.size}이며, 가격은 ${pizzaName.price}입니다.`
             console.log(text)
          }
 
