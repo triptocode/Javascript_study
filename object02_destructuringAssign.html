@@ -55,7 +55,18 @@
         객체의 keyName 을 함수의 파라미터 변수로 바로 넣고 , 문장에 넣을때도 ${item.title} 대신 ${title}로 넣고 bookInfo(book2)처럼 각 객체이름으로 함수를 호출 된다. 
         */
 
-         // 방식3. 비구조화 할당으로 함수와 객체 표현 
+         // 추가4. : 객체 비구조화 할당 방식은 함수내부가 아닌 객체 자체에서도 바로 구조분해 가능 
+         const book3 = {
+            title: "Java for beginner",
+            book_type: "programming language",
+            price: 28000
+         }
+         // 아래 처럼 const {keNmae} = Object명으로 분리, console.log()에는 keyName만 넣고 출력
+         const {title} = book3
+         console.log(title)
+
+
+         
 
     </script>
 </body>
