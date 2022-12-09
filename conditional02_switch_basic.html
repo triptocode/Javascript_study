@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditional Statement</title>
+</head>
+<body>
+
+    <script> 
+        const device = 'mouse'
+        //const device = 'sfsdf'  // 결과: 알수 없는 장비 입니다.
+
+        switch(device){
+                case 'keyboard' : console.log('키보드') 
+                break
+                case 'mouse' : console.log('마우스')
+                break  // break가 없으면 멈추지 않고 내려가서 mouse, monitor 두개가 나옴
+                case 'monitor' : console.log('모니터')
+                break
+                default : console.log('알수 없는 장비 입니다.') 
+        }
+
+/* 
+default : 어떠한 case 절에도 해당하지 않을 때 실행.
+default는 반드시 존재해야 하는 것은 아니며, 필요할 때만 선언할 수 있다.
+
+break : 각 case 절 및 default 절은 반드시 break 키워드를 포함해야 함.
+break 키워드는 조건 값에 해당하는 case 절이나 default 절이 실행된 뒤에 전체 switch 문을 빠져나가게 해준다.
+*/
+
+        
+
+
+    </script>
+    
+</body>
+</html>
