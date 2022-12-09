@@ -4,25 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title> 객체 내부에 함수 넣기 및 this </title>
 </head>
 <body>
     <script>
         const dog= {
-            name: '멍멍이',
-            sound: '왈왈!!',
+            name: '바둑이',
+            sound: '멍멍!!',
             say: function say(){
-                console.log(this.sound);
+                console.log(this.sound);  // this 는 여기서 dog 
             }
         }
 
         const cat = {
-            name:'야옹이',
+            name:'네오',
             sound:'야옹~~'
         };
 
         cat.say= dog.say;
-        dog.say()
+        dog.say() 
         cat.say()
 
     </script>
