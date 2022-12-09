@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const book1 = {
+            title: "Python Basic",
+            book_type: "programming language",
+            price: 18000        
+         };
+         const book2 = {
+            title: "JS Master",
+            book_type: "programming language",
+            price: 24000
+            /*  "book type"대신 book_type로 처리한 이유:  keyName의 공백을 quote 따옴표를 붙여 "book type" 표현하는방식보다는 언더바를 붙여 book_type로 처리한 이유는 
+            아래 function 함수의 파라미터 변수로 keyName을 활용하게 되는데, 변수표현은 단어간 공백이 있으면 따옴표가 아닌 언더바로 표기하기때문에 
+                keynmae을 변수로 쓰기위해 언더바 표기로 맞춰주었다
+            */
+         };
+
+         // 방식1. 일반함수와 객체로 표현
+         function bookInfo({item}){
+            const text = `이 책 제목은 ${item.title}이고, 종류는 ${item.book_type}관련이고, 가격은 ${price}원 입니다.`
+            console.log(text)
+         }
+         bookInfo(book1)
+         bookInfo(book2)
+
+        // 방식2. 비구조화 할당으로 함수와 객체 표현   ( 비구조화 할당 : ES6 문법, 객체 구조분해 라고도 함))
+        function bookInfo({item}){
+            const {title, book_type, price } = item
+            const text = `이 책 제목은 ${title}이고, 종류는 ${book_type}관련이고, 가격은 ${price}원 입니다.`
+            console.log(text)
+        }
+
+        bookInfo(book1)
+        bookInfo(book2)
+
+          // 방식3. 비구조화 할당으로 함수와 객체 표현   ( 비구조화 할당 : ES6 문법, 객체 구조분해 라고도 함))
+         function bookInfo({title, price, book_type}){
+            const text = `이 책의 종류는 ${book_type}관련이고, 제목은 ${title}, 가격은 ${price}원 입니다.`
+            console.log(text)
+         }
+
+         bookInfo(book1)
+         bookInfo(book2)
+
+        /*객체 비구조화 할당 방식 
+        일반함수인 function bookInfo(item){  const text = `이 책의 종류는 ${item.book_type}, ${item.title}, ${item.price} ~ 생략`} 형식의 표기 방식대신
+        객체의 keyName 을 함수의 파라미터 변수로 바로 넣고 , 문장에 넣을때도 ${item.title} 대신 ${title}로 넣고 bookInfo(book2)처럼 각 객체이름으로 함수를 호출 된다. 
+        */
+
+         // 방식3. 비구조화 할당으로 함수와 객체 표현 
+
+    </script>
+</body>
+</html>
