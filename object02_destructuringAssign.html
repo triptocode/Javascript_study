@@ -31,7 +31,7 @@
          bookInfo(book1)
          bookInfo(book2)
 
-        // 방식2. 비구조화 할당으로 함수와 객체 표현   ( 비구조화 할당 : ES6 문법, 객체 구조분해 라고도 함))
+        // 방식2. 비구조화 할당으로 함수와 객체 표현   ( 비구조화 할당 : ES6 문법, 객체 구조분해 라고도 함)
         function bookInfo({item}){
             const {title, book_type, price } = item
             const text = `이 책 제목은 ${title}이고, 종류는 ${book_type}관련이고, 가격은 ${price}원 입니다.`
@@ -41,7 +41,7 @@
         bookInfo(book1)
         bookInfo(book2)
 
-          // 방식3. 비구조화 할당으로 함수와 객체 표현   ( 비구조화 할당 : ES6 문법, 객체 구조분해 라고도 함))
+          // 방식3. 비구조화 할당으로 함수와 객체 표현   ( 비구조화 할당 : ES6 문법, 객체 구조분해 라고도 함)
          function bookInfo({title, price, book_type}){
             const text = `이 책의 종류는 ${book_type}관련이고, 제목은 ${title}, 가격은 ${price}원 입니다.`
             console.log(text)
@@ -64,9 +64,6 @@
          // 아래 처럼 const {keNmae} = Object명으로 분리, console.log()에는 keyName만 넣고 출력
          const {title} = book3
          console.log(title)
-
-
-         
 
     </script>
 </body>
