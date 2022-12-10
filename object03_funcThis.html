@@ -11,9 +11,8 @@
         const dog= {
             name: '바둑이',
             sound: '멍멍!!',
-            say: function say(){
-                console.log(this.sound);  // this 는 여기서 dog 
-            }
+            say: function say() //  say: function ()  또는  say()
+            { console.log(this.sound);  } // this 는 여기서 dog          
         }
 
         const cat = {
@@ -24,6 +23,19 @@
         cat.say= dog.say;
         dog.say() 
         cat.say()
+
+        // 객체내부 함수와 this 에 대해 알아본다.  
+        const obj = { 
+            goal: '객체내부 함수, this, 화살표함수의 undefine 한계등을 알아보는 코드',
+            a : function a(){ console.log('첫번째', this)} ,
+            b(){ console.log('두번째', this)} ,
+            cc : function c(){ console.log('세번째', this)} ,
+        }
+        obj.a()
+        obj.b()
+        obj.cc()
+        
+        // 객체내부 화살표함수는 this를 인식하지못해 undefine 으로 출력되는 현상을 테스트해 본다
 
     </script>
 </body>
