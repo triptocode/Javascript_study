@@ -8,22 +8,46 @@
 </head>
 <body>
     <script>
-
+    // for 사용방법 - 기본  
         const cars = ['Toyota', 'Ford', 'BMW', 'KIA'];
         for(let i = 0; i<cars.length; i++){
             console.log(cars[i])
         }
         console.log(cars)
-
+    // for( of )
         const nations = ['Korea', 'Japan', 'Spain ', 'Canada'];
         for (let nation of nations) {
             console.log(nation);
         }
-
+    // .forEach
         const fruits = ['apple', 'banana', 'kiwi'];
         fruits.forEach(function (fruit, index, array) {
             console.log(fruit, index, array);
           });
+    // for()
+    for (i = 3; i > 0; i--) {
+        console.log(`-1씩 감소 반복: ${i}`);
+    }
+    // 이중 for문
+    for (let i = 1; i < 3; i++) {
+        // i는 지역변수이다.
+        for (let j = 1; j < 4; j++) {
+            console.log(`1~3까지 ${i}번째 작성: ${j}`);
+        }
+    }
+
+    // for, if 혼합 - 짝수출력하기
+for (let num = 0; num <= 4; num++) {
+	if (num % 2 !== 0) continue;
+    console.log(`${num}`);
+}
+
+// 8까지 출력하기
+for (let num = 11; num <= 15; num++) {
+	if (num > 13) break;
+	console.log(`${num}`);
+}
+    
     </script>
     
 </body>
