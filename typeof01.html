@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> typeof - JS의 7가지 변수</title>
+</head>
+<body>
+    <script>
+        //  typeof 연산자 ( JS의 변수 타입을 문자로 반환하는 함수) 
+        //   JS의 7가지 변수 종류는 아래와 같다.
+        //undefined, null, boolean, number, string, symbol, object, function
+      
+        console.log(typeof null);
+        // 출력 결과: "object"  ( null은 object가아닌 null로 바꾸자는 논쟁이 있지만 아직 object를 반환)
+        console.log(typeof {});
+        // 출력 결과: "object
+
+        console.log(typeof []); 
+        // 출력 결과: "object  ( typeof는 배열을 array로 구분해 반환하지 못하고 object!)
+        
+        console.log(typeof 27);
+        // 출력 결과: "number"
+
+        console.log(typeof 'hello');
+        // 출력 결과: "string"
+        
+        console.log(typeof hello);  // 따옴표가 없어서 string 문자로 인식 x
+        // 출력 결과: "undefined"    
+
+        console.log(typeof true);
+        // 출력 결과: "boolean"
+
+        console.log(typeof Symbol());
+        // 출력 결과: "symbol"
+
+        console.log(typeof function() {});
+        // 출력 결과: "function"
+
+
+    </script>
+    
+</body>
+</html>
