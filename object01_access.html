@@ -13,24 +13,24 @@
                         price : 20000
                         }
                         
-    }  
+              }  
 // 객체는 keyName을 가지고 value데이터를 아래처럼 가져온다.     
-    console.log(obj.discount); // 20000
-    console.log(obj.book);  // {title: 'JS basic', discount: -1000}
+    console.log(obj.discount); // -1000
+    console.log(obj.book);     // {title: 'JS basic', price: 20000}
       
-/////// 객체안에 객체가 또 있다면 접근방법은 다음3가지가 있다 //////
+/////// 객체안에 객체 접근방법 3가지 ///////
 
 // 1) 객체안에 객체 접근방법 : 점 표기법
-    console.log(obj.book.price);
+    console.log(obj.book.price);        // 20000
 
 // 2) 객체안에 객체 접근방법 : 문자열로 접근
-    console.log(obj['book']['price']);
+    console.log(obj['book']['price']);  // 20000
     
 // 3) 객체안에 객체 접근방법 : 변수로 접근
     let objBook = 'book';
-    let objPrice = 'price';
+    let objPrice = 'price'; 
 
-    console.log(obj[objBook][objPrice]);
+    console.log(obj[objBook][objPrice]); // 20000
    </script>    
 </body>
 </html>
