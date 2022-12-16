@@ -16,14 +16,23 @@
             { console.log(this.sound);  } // this 는 여기서 dog          
         }
 
-        const cat = {
+        /*const cat = {
             name:'네오',
             sound:'야옹~~'
-        };
+        };*/
 
-        cat.say= dog.say;
-        dog.say() 
-        cat.say()
+       cat.say= dog.say;
+        /*  const cat = {
+            name:'네오',
+            sound:'야옹~~',
+            say: function say() 
+            { console.log(this.sound);  }
+        };
+        */
+       dog.say() 
+       cat.say()  
+        
+        
 
         // 2. 객체내부 일반함수의 this와 화살표함수의 this의 scope{} 영역 차이점  
         const obj = { 
@@ -31,6 +40,7 @@
             a : function a(){ console.log('첫번째', this)} ,
             b(){ console.log('두번째', this)} ,
             cc : function c(){ console.log('세번째', this)} ,
+
             d : function d(){console.log('네번째 ', this.goal)},
             e : function e(){console.log('다섯번째 ', this.goalTwo)}, // undefined
 
@@ -38,14 +48,14 @@
                                                        //화살표 함수의 this는 상위scope 지칭
                                                        //화살표 함수의 웹상 부모scope는 window객체가 상위가 됨 
         }                                           
-       
-
+       // 아래 3개는 출력 결과가 동일 
         obj.a()
         obj.b()
         obj.cc()
-        obj.d()
-        obj.e()
-        obj.f()
+
+        obj.d()  // goal키의 문구
+        obj.e()  // undefined
+        obj.f()  // window가 출력됨( 화살표함수의 this는 일반함수 this와 의미하는 영역이 다르다. 상위 scope을 가리키고 웹상 화살표함수의 부모scope은 window)
        
         
 
