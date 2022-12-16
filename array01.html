@@ -44,12 +44,14 @@
     // .unshift - 앞에 값 삭제        
     rainbow.shift()                 
     console.log(rainbow)               //  ['노', '초']
-    // .unshift - 앞에 값 추가  
+    // .shift - 앞에 값 추가  
     rainbow.unshift('빨','주')          
     console.log(rainbow)               //  ['빨', '주', '노', '초'] 
-    // .push - 앞에 값 추가  
+    // .push - 마지막에 값 추가  
     rainbow.push('파', '남', '보')  
     console.log(rainbow)               //  ['빨', '주', '노', '초', '파', '남', '보']   
+
+
     // .splice - 배열에서 원하는 인덱스의 값을 삭제하거나 삭제하고 추가
     rainbow.splice(1,2)           // [1]자리부터 2개 삭제 ( 주, 노 -삭제 )
     console.log(rainbow)          // ['빨', '초', '파', '남', '보']
@@ -57,7 +59,10 @@
     console.log(rainbow)          // ['빨', '초', '파']
     rainbow.splice(1,2,'주','노') // [1]부터 2개 삭제(초,파 -삭제)후, 그자리 '주','노'추가
     console.log(rainbow)          // ['빨', '주', '노']
+
+    
     // .concat(합칠array변수명) - 두개의 배열을 연결
+    /*
     const rainbow2 = ['초', '파', '남', '보']
     const perfectRainbow = rainbow.concat(rainbow2)  // rainbow인['빨','주','노'] 와 rainbow2 ['초', '파', '남', '보'] 합침
     console.log(perfectRainbow)   // ['빨', '주', '노', '초', '파', '남', '보']
@@ -70,6 +75,7 @@
     console.log(nature.lastIndexOf('sky'))  // 3
     console.log(nature.includes('tree'));   // true
     console.log(nature.includes('dog'));    // false
+    */
     </script>
 </body>
 </html>
