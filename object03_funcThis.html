@@ -8,12 +8,13 @@
 </head>
 <body>
     <script>
-        // 1. 일반함수의 this 는 자기가 속한 scope { }를 의미 
+        // 1. 일반함수의 this - 객체 내부의 일반함수의 this 는 자기가 객체, 해당 객체scope { }를 의미 
+        //  아래코드에서 this 는 여기서 dog  
         const dog= {
             name: '바둑이',
             sound: '멍멍!!',
             say: function say() //  say: function ()  또는  say()
-            { console.log(this.sound);  } // this 는 여기서 dog          
+            { console.log(this.sound);  }        
         }
 
         const cat = {
@@ -22,7 +23,8 @@
         };
 
        cat.say= dog.say;
-        /*  const cat = {
+        /*  위의 한줄 코드로 인해 아래와 같이 형성이 됨
+            const cat = {
             name:'네오',
             sound:'야옹~~',
             say: function say() 
@@ -52,7 +54,7 @@
         obj.b()
         obj.cc()
 
-        obj.d()  // goal키의 문구
+        obj.d()  // goal키의 문장이 출력됨
         obj.e()  // undefined
         obj.f()  // window가 출력됨( 화살표함수의 this는 일반함수 this와 의미하는 영역이 다르다. 상위 scope을 가리키고 웹상 화살표함수의 부모scope은 window)
          
