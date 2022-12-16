@@ -33,7 +33,6 @@
        cat.say()  
         
         
-
         // 2. 객체내부 일반함수의 this와 화살표함수의 this의 scope{} 영역 차이점  
         const obj = { 
             goal: '객체내부 일반함수의 this, 화살표함수의 this 차이점을 알아보는 코드',
@@ -56,10 +55,7 @@
         obj.d()  // goal키의 문구
         obj.e()  // undefined
         obj.f()  // window가 출력됨( 화살표함수의 this는 일반함수 this와 의미하는 영역이 다르다. 상위 scope을 가리키고 웹상 화살표함수의 부모scope은 window)
-       
-        
-
-        
+         
         // 화살표함수 obj.d() 콘솔출력시 window로 나타나는 이유: 
         // 객체내부 화살표함수의 this는 더 상위인 부모scope를 가리킨다. 
         // 여기서 상위scope가 없기에 웹에서 this의 최상위는 window여서 window로 출력됨
