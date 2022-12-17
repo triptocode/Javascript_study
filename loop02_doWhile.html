@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 반복문 do while </title>
+</head>
+<body>
+
+    while (표현식 or 조건식 ) {
+        조건식의 결과가 참인 동안 반복적으로 실행하고자 하는 실행문; 
+    }
+
+   <br><br>
+    <script>
+		
+        // 1) while 예제1
+        let i = 1;    //  초기값 : 변수i는 1로 설정 , const 데이터 재할당불가로 반복문 사용x
+		
+		while (i < 10) { // 조건식: 변수 i가 10보다 작을 때만 while 문을 반복
+			document.write(i + "<br>");
+			i++; // 증감식: 반복할 때마다 변수 i를 1씩 증가시켜 변수 i가 10보다 커지면 반복문을 종료함.
+		}
+
+        document.write("<br>");
+
+       
+        //  2) while 예제2
+        // 1부터 4까지 숫자를 더한다.  
+        let sum2 = 0;
+        let add2 = 0;
+        while (add2<=4){
+            sum2 = sum2 + add2;    //  sum2 + add2 루프 과정:  0+0 /  0+1 /  (0+1) +2 / (0+1+2) +3  / (0+1+2+3) +4
+            add2++;
+        }
+        document.write("1부터 4까지 더한 결과 : " + sum2 + "<br>");
+
+        //  2) while 예제3
+        // 1부터 100까지 숫자를 더한다.
+        let sum = 0;
+        let add = 0;
+        while (add<=100){
+            sum = sum + add;
+            add++;
+        }
+        document.write("1부터 100까지 더한 결과 : " + sum + "<br>");
+        document.write("<br>");
+
+
+         //  2) do while 예제3 - ( do 는 조건식과 무관하게 1회 강제 실행 let num= 10으로 수정해도 10 출력 한번은 실행됨)
+        let num=1;                          //초기값
+        do {
+          document.write( num, '<br>');    //실행문  - do는 조건식과 무관하게 1회 강제 실행하기 때문에 초기값을 let num= 10으로 수정해도 10 출력 한번은 실행됨 
+          num++;                           //증감식
+          }
+        while ( num <= 9 )               //조건식
+
+        
+	</script>
+</body>
+</html>
