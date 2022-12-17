@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        class Food{
+            constructor(name){
+                this.name = name;
+                this.types = [];              
+            }
+            addType(type){
+                this.types.push(type)
+            }
+            print(){
+                console.log(`${this.name}의 종류를 알아보자`)
+                console.log(this.types.join(','))
+            }
+
+        }
+
+        const fruit = new Food('과일')
+        fruit.addType('포도')
+        fruit.addType('사과')
+
+        fruit.print()
+
+    </script>
+</body>
+</html>
