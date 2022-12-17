@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+// 예제1. new 연산자를 활용한 객체생성
+        function Car( name, color, year ){
+            this.name = name;
+            this.color = color;
+            this.year = year;
+        }
+        let car1 = new Car( 'SM6', 'black', 2020 )
+        let car2 = new Car( 'GV70', 'gray', 2021 )
+
+        document.write(`${car1.name} ${car1.color} ${car1.year}`)
+        document.write('<br>')
+        document.write(`${car2.name} ${car2.color} ${car2.year}`)
+        document.write('<br>')
+        
+        // 다양한 객체 접근방식 
+        document.write(car1.name+'<br>')
+        document.write(car1['name']+'<br>')
+
+// 예제2. new 연산자를 활용한 객체생성
+        function Circle(radius){
+            this.radius = radius;
+            this.diameter = function(){
+                return 2*this.radius;
+            }
+        }
+
+        // 인스턴스 생성
+        const circle1 = new Circle(10)
+        const circle2 = new Circle(20)
+        document.write(`circle1의 반지름은${circle1.radius}, 지름은: ${circle1.diameter()}이다 `)
+        document.write('<br>')
+        document.write(`circle1의 반지름은${circle2.radius}, 지름은: ${circle2.diameter()}이다 `)
+
+
+
+    </script>
+</body>
+</html>
