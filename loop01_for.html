@@ -44,9 +44,16 @@
 
     // for, if 혼합 : 짝수출력하기
 for (let num = 0; num <= 4; num++) {
-	if (num % 2 !== 0) continue;
-    console.log(`${num}`);
+	if (num % 2 !== 0) continue; //  2로 나눠서 나머지가 0이 아니라면, 즉 짝수가 아니라면 아래의 출력을 하지 않고 넘어감. 그 다음숫자로 진행.
+    console.log(num);
 }
+
+for (let num = 1; num < 6; num++) {
+   // document.write(num+"<br>");
+	if (num < 4) continue;  // 4보다 작으면 다음줄 출력코드가 실행 X, 즉 다음숫자로 넘어가 지속continue
+    document.write(num); // 4,5
+}
+
 
 // // for, if 혼합 : 11에서 15까지 숫자를 출력하는데, 
 // 전체를 한번에가 아닌 하나씩 출력되도록 반복하려고 했으나,  13보다 크면 출력을 멈추도록 제한 조건을 추가로걸기.
