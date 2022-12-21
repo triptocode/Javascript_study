@@ -8,12 +8,19 @@
 </head>
 <body>
     <script>
-    // for 사용방법 - 기본  
+    // for 사용방법 - 기본  (1씩 증가)
         const cars = ['Toyota', 'Ford', 'BMW', 'KIA'];
         for(let i = 0; i<cars.length; i++){
             console.log(cars[i])
         }
         console.log(cars)
+
+        // for 사용방법 - 기본 (1씩 감소)
+        for (i = 3; i > 0; i--) {
+        console.log(`-1씩 감소 반복: ${i}`);
+    }
+
+
     // for( of )
         const nations = ['Korea', 'Japan', 'Spain ', 'Canada'];
         for (let nation of nations) {
@@ -24,10 +31,9 @@
         fruits.forEach(function (fruit, index, array) {
             console.log(fruit, index, array);
           });
-    // for()
-    for (i = 3; i > 0; i--) {
-        console.log(`-1씩 감소 반복: ${i}`);
-    }
+    //for in 나중에 업댓 
+    
+    
     // 이중 for문
     for (let i = 1; i < 3; i++) {
         for (let j = 1; j < 4; j++) {
@@ -61,6 +67,7 @@ for (let num = 11; num <= 15; num++) {
 	if (num > 13) break;
 	console.log(`${num}`);
 }   
+
 
 
     </script>
