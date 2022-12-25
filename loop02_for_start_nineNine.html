@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 이중 for문 에제 - 별찍기, 구구단</title>
+</head>
+<body>
+ <script> 
+    // 사각 
+    for(let i = 0; i < 5; i++)  {
+        for(let j = 0; j < 5; j++)  {
+          document.write('*');
+        }
+        document.write('<br>');
+      }
+
+      document.write('<br>');
+      // 삼각 - 우측으로 점점 크게
+      for (let i = 0; i < 5; i++) {
+        for (let j = 0; j <= i; j++) {
+          document.write('*')
+        }
+        document.write('<br>');
+      }
+
+      document.write('<br>');
+       // 삼각 - 좌측으로 점점 크게
+      for(let i = 0; i < 5; i++)  {
+        for(let j = 4; j > i; j--)  {
+        //공백 &nbsp 넣을곳에, a를 넣어 공백코드 위치 이해를 쉽게!
+          document.write('a');
+        }
+        for(let j = 0; j <= i; j++) {
+          document.write('*');
+        }
+        document.write('<br>');
+      }
+    
+      
+      document.write('<br>');
+      // 역삼각 - 우측에서 넓다가 줄어들게
+      for (let i = 0; i < 5; i++) {
+        for (let j = 5; j > i; j--) {
+          document.write('*');
+        }
+        document.write('<br>');
+      }
+
+
+   document.write('<br>');
+    // 역삼각 - 좌측에서 넓다가 줄어들게    
+      for(let i = 0; i < 5; i++)  {
+        for(let j=0; j <= i; j++)  {
+          // space
+          document.write('&nbsp');
+        }
+        for(let j=5; j > i; j--)  {
+          document.write('*');
+        }
+        document.write('<br>');
+      }
+
+      document.write('<br>');
+       // 정삼각형
+      for(let i = 0; i < 5; i++)  {
+        for(let j=4; j > i; j--)  {
+        //공백 &nbsp 넣을곳에, a를 넣어 공백코드 위치 이해를 쉽게!
+          document.write('a');
+        }
+        for(let j=0; j <= i; j++)  {
+          document.write('*');
+        }
+        for(let j=1; j <= i; j++)  {
+          document.write('*');
+        }
+        document.write('<br>');
+      }
+
+      document.write('<br>');
+        // 역 정삼각형
+        for(let i = 0; i < 5; i++)  {
+            for(let j=0; j < i; j++)  {
+              document.write('&nbsp');
+            }
+            for(let j=5; j > i; j--)  {
+              // space
+              document.write('*');
+            }
+            for(let j=4; j > i; j--)  {
+              document.write('*');
+            }
+            document.write('<br>');
+          }
+
+
+
+    // 이중 for문 - 구구단 
+    for( let i = 2 ; i < 10 ; i++){     // 변수선언시 const 사용하면 로직불가 
+        for( let j = 1; j <10 ; j++ ){
+            document.write( i+"x"+j+"="+(i*j)+"</br>" );   
+        }
+    } 
+   
+    /*
+        여기서 다시 복습할 변수선언 타입을 보자면
+       var : 중복선언 , 재할당 모두 가능
+       let :  재할당만 가능
+       const : 모두 불가능 
+    */   
+    </script>     
+</body>
+</html>
