@@ -19,12 +19,12 @@
     const rt = document.getElementById("root")
 
     const hThree = React.createElement('h3'
-                                 , { onMouseEnter: () => console.log('mouse enter')}
-                                 , 'h3 with React!!' )
+                                      ,{ onMouseEnter: () => console.log('mouse enter')}
+                                      ,'h3 with React!!' )
                                 
     const btn = React.createElement('button'
-                                 , { onClick: () => console.log("I'm clicked")}
-                                 , '버튼')
+                                   ,{ onClick: () => console.log("I'm clicked")}
+                                   ,'버튼')
     const container = React.createElement('div', null, [hThree, btn])
         
     ReactDOM.render(container, rt)  // render(element, container[, callback])
