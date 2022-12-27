@@ -17,16 +17,23 @@
 <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 <script type="text/babel"> 
     const rt = document.getElementById("root")
-    const hThree = (<h3 id ='title' onMouseEnter={() => console.log('mouse enter')}>
+ //화살표 함수로 수정함
+ // 수정전:  const hThree = (<h3 id ='title' onMouseEnter={() => console.log('mouse enter')}>    
+    const Hthree = ()=>(<h3 id ='title' onMouseEnter={() => console.log('mouse enter')}>
                             I'm a title
                    </h3>
                    );
-/*  const hThree = React.createElement('h3'
-                                 , { onMouseEnter: () => console.log('mouse enter')}
-                                 , 'h3 with React!!' )
+/*  화살표함수는 아래 코드와 같음
+    function hThree(){
+        return ( <h3 id ='title' onMouseEnter={() => console.log('mouse enter')}>
+                            I'm a title
+                   </h3>
+        )
+    }
+
 */                                
 
-    const btn = ( <button style={{backgroundColor:'tomato'}}
+    const Btn = ()=>( <button style={{backgroundColor:'tomato'}}
                           onClick={()=> console.log("I'm clicked")}
                   > 버튼
                  </button>
@@ -35,9 +42,14 @@
                                  , { onClick: () => console.log("I'm clicked")}
                                  , '버튼')
 */                                 
-    const container = React.createElement('div', null, [hThree, btn])
+    const Container =(
+        <div>
+            <Hthree/>
+            <Btn/>
+        </div>
+    )
         
-    ReactDOM.render(container, rt)  
+    ReactDOM.render(Container, rt)  
 
 
 
