@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        const abcde = ['a', 'a', 'a', 'b', 'c','c','d','e']
+       
+        const counts = abcde.reduce((acc, crr) =>{
+            if(acc[crr]) { // acc안에 crr값, 즉'a'가 존재한다면 실행
+                acc[crr] +=1;
+            }
+            else{acc[crr]= 1 // 2)acc안에 crr값이 존재하지 않아서 실행 -> 'a' 값이 1이 됨
+            }
+            return acc;
+        }, {}// 1)acc의 기본 초기값은 {}, 즉 비어있는 객체 {}안에 crr는 0부터 시작으로 설정
+        ) // reduce종료
+
+        console.log(counts) // {a: 3, b: 1, c: 2, d: 1, e: 1} 
+
+    </script>  
+</body>
+</html>

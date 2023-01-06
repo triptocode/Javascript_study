@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+     // reduce :  주로 배열안에 값이 주어졌을때 모든값을 활용하여 연산하기위해 사용
+
+     // 잠시 forEach메서드와 화살표함수 리뷰하고  합계를 forEach 와 reduce 두가지 방식으로 연산해 본다! 
+let animals = ['tiger', 'rabbit', 'dog', 'monkey'];
+
+animals.forEach(animal =>{console.log(animal);});
+// function myFunc(animal){console.log(animal)}; 
+// animals.forEach(myFunc)
+
+     // 방법1 - 합계 forEach활용
+     const num1 = [1,2,3];
+     let sum1 = 0;
+     num1.forEach(a =>{ sum1 += a;})
+     console.log(sum1) // 6 
+    // 방법2 - 합계 reduce활용
+     const num2 = [1,2,3];
+     let sum2 = num2.reduce((accumulator, current)=>accumulator+current,0)
+     console.log(sum2) // 6
+
+
+
+        const numbers = [1,2,3,4,5]; // index: 0부터, 즉 0 1 2 3 4까지 존재 
+                         //   1)연산 start!    0   ,   1    ,   0   , numbers
+        const average = numbers.reduce((accumulator, current, index, array) => {                       
+            if(index===array.length-1){
+            // index는 4까지니까 array.length는 5여서-1해서 마지막index인 4까지 
+            // reduce 루프반복이 돌면서 합산을 하고, 나누기3으로 평균을 내면서 종료하게 설정!
+                return(accumulator+current)/array.length; // 15나누기5, 즉 3
+            } // if 문 종료 
+
+            return accumulator+current;
+        }, 0 ); // numbers 종료 ( 0은 accumulator의 초기 기본값 )
+        
+        console.log(average) // 3
+
+    </script>
+    
+</body>
+</html>
