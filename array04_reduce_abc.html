@@ -9,20 +9,56 @@
 <body>
     <script>
 
-        const abcde = ['a', 'a', 'a', 'b', 'c','c','d','e']
-       
-        const counts = abcde.reduce((acc, crr) =>{
-            if(acc[crr]) { // acc안에 crr값, 즉'a'가 존재한다면 실행
-                acc[crr] +=1;
-            }
-            else{acc[crr]= 1 // 2)acc안에 crr값이 존재하지 않아서 실행 -> 'a' 값이 1이 됨
-            }
-            return acc;
-        }, {}// 1)acc의 기본 초기값은 {}, 즉 비어있는 객체 {}안에 crr는 0부터 시작으로 설정
-        ) // reduce종료
+////// reduce :  주로 배열안에 값이 주어졌을때 모든값을 활용하여 연산하기위해 사용 ////////
 
-        console.log(counts) // {a: 3, b: 1, c: 2, d: 1, e: 1} 
+////// 잠시 forEach메서드와 화살표함수 리뷰하고  합계를 forEach 와 reduce 두가지 방식으로 연산해 본다!   ////////
+let animals = ['tiger', 'rabbit', 'dog', 'monkey'];
 
-    </script>  
+animals.forEach(animal =>{console.log(animal);});
+// function myFunc(animal){console.log(animal)}; 
+// animals.forEach(myFunc)
+
+//////// 방법1 - 합계 forEach활용  //////////
+     const num1 = [1,2,3];
+     let sum1 = 0;
+     num1.forEach(a =>{ sum1 += a;})
+     console.log(sum1) // 6 
+//////// 방법2 - 합계 reduce활용   ///////////
+     const num2 = [1,2,3];
+     let sum2 = num2.reduce((accumulator, current)=>accumulator+current,0)
+     console.log(sum2) // 6
+
+
+
+//////// reduce 구조  //////////
+     const arr = [1, 2, 3, 4];
+
+const initialValue = 0;
+const sum3 = arr.reduce(
+  (previousValue, currentValue) => previousValue + currentValue,
+  initialValue
+);
+
+// 0 + 1 + 2 + 3 + 4
+console.log(sum3); // 10
+
+
+////// reduce - 평균구하기  ////////
+        const numbers = [1,2,3,4,5]; // index: 0부터, 즉 0 1 2 3 4까지 존재 
+                         //   1)연산 start!    0   ,   1    ,   0   , numbers
+        const average = numbers.reduce((accumulator, current, index, array) => {                       
+            if(index===array.length-1){
+            // index는 4까지니까 array.length는 5여서-1해서 마지막index인 4까지 
+            // reduce 루프반복이 돌면서 합산을 하고, 나누기3으로 평균을 내면서 종료하게 설정!
+                return(accumulator+current)/array.length; // 15나누기5, 즉 3
+            } // if 문 종료 
+
+            return accumulator+current;
+        }, 0 ); // numbers 종료 ( 0은 accumulator의 초기 기본값 )
+        
+        console.log(average) // 3
+
+    </script>
+    
 </body>
 </html>
