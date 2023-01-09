@@ -14,7 +14,8 @@
         const arr = [1,2,3,4,5,6,7,8]
         const squared = arr.map(n=>n*n)
         console.log(squared)
-
+        // map예제 - items배열안에 요소들이 객체일때 특정key value 접근방법
+        //items배열에 요소가 객체인데, parameter인 item을 설정해 객체를 받아 key로 접근 ex) item.text
         const items = [
             {
                 id: 1,
@@ -27,6 +28,7 @@
         ]
 
         const texts = items.map(item => item.text);
+        console.log(items);
         console.log(texts);
 
         // map예제 - find함수, todo
