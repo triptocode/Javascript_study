@@ -3,7 +3,7 @@
 
 
 // if 문 vs 삼항연산자 비교 
-    // 1. if 문 
+    // 1-1. if 문 
     let array=[]; // let array=[1,2,3]; 
     let text="";
 
@@ -15,10 +15,24 @@
 
     console.log(text)
 
-    // 2. 삼항연산자
+    // 1-2. 삼항연산자 (조건식: 연산공식)
     let array2=[]; // let array=[1,2,3]; 
     let text2= array2.length ===0 ? "array2 배열은 빈상태" : "array2 배열에 요소들이 존재 !!!.";
     console.log(text2)
 
 
+    // 2-1  삼항연산자 (조건식: 매개변수)
+    function trueOrFalse(isMember) {
+        return (isMember ? '참' : '거짓');
+      }
+      
+      console.log(trueOrFalse(true));  
+
+      console.log(trueOrFalse(false)); 
+      // js에서 false인 기타 종류들
+      console.log(trueOrFalse(0));
+      console.log(trueOrFalse(-0));
+      console.log(trueOrFalse(""));
+      console.log(trueOrFalse(null));
+      
 
