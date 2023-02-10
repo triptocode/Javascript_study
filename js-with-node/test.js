@@ -6,7 +6,7 @@
 // node.js 다운로드 링크: https://nodejs.org/ko/download/
 // node.js다운 이후 Terminal을 열어 'node js파일명' 을(확장자명빼고) 입력하면 console을 출력해 볼수 있다. 
 
-let numer = 123;
+let numer = 1234;
 console.log(numer);
 
 // node.js 다운받은 이후부터 
