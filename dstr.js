@@ -47,4 +47,9 @@ print(obj);
 
 
 
+// 새로운 변수 이름으로 할당하기
+var name = {num: 123, trueOrFalse: true};
+var {num: change1, trueOrFalse: change2} = name;
 
+console.log(change1); // 123
+console.log(change2); // true
