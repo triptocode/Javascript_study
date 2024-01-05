@@ -1,0 +1,17 @@
+// 즉시실행함수 IIFE (Imediately Invoked Function Expression) 
+// 작성방법 2가지  
+// 공통점은 ()() 의 소괄호 2개로 함수를 감싼다. 차이점은 두번째 소괄호 ()를 첫번째()가 감싸 주는지 제외하는지 여부 
+// 첫번째, (function(){})()
+// 두번째, (function(){}())
+
+// 기능: 선언하자마자 한번 호출되고 더이상 사용되지 않음. (익명함수여서 함수이름으로 호출이 불가능)
+
+let num = 1;
+(function(){
+    console.log(num+1)
+})();
+
+let num2 = 2;
+(function(){
+    console.log(num2+1)
+}());
