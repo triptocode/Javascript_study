@@ -8,6 +8,7 @@ function work(){
 
         }
         const end = Date.now();
+        console.log(end);
         console.log(end-start+'ms');
     }, 0) // 실제는 0이 아니라 4
 }

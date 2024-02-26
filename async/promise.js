@@ -12,11 +12,11 @@ const myPromise = new Promise((resolve, reject) => {
 });
 
 myPromise
-    .then((rslv)=>{
-        console.log("결과: "+ rslv)
+    .then((rs)=>{
+        console.log("결과: "+ rs)
     })
-    .catch((rej)=>{
-        console.log("에러: "+rej)
+    .catch((rj)=>{
+        console.log("에러: "+rj)
     })
     .finally(()=>{
         console.log("조건없이 실행")
